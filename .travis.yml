@@ -1,0 +1,21 @@
+#
+# Copyright (c) 2016 Games Neox. All rights reserved.
+#
+# This file is an original work developed by Games Neox
+#
+
+language: android
+jdk: oraclejdk8
+
+android:
+  components:
+    - tools
+    - tools
+    - build-tools-24.0.3
+    - android-24
+    - extra-android-m2repository
+    - extra-android-support
+    - platform-tools
+
+script:
+  - ./gradlew :clean :defence:testDebugUnitTest

@@ -1,0 +1,55 @@
+apply plugin: 'com.android.library'
+
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'defence'
+
+    publishedGroupId = 'com.gamesneox.defence'
+    libraryName = 'Defence'
+    artifact = 'defence'
+
+    libraryDescription = 'Defensive-code tool for Java/Kotlin'
+
+    siteUrl = 'https://github.com/games-neox/Defence'
+    gitUrl = 'https://github.com/games-neox/Defence.git'
+
+    libraryVersion = '0.1.0'
+
+    developerId = 'games-neox'
+    developerName = 'Games Neox'
+    developerEmail = 'games.neox@gmail.com'
+
+    licenseName = 'MIT License'
+    licenseUrl = 'https://github.com/games-neox/Defence/blob/master/LICENSE'
+    allLicenses = ["MIT License"]
+}
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.3"
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 24
+        versionCode 1
+        versionName "0.1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    testCompile 'junit:junit:4.12'
+}
+
+apply from: 'https://raw.githubusercontent.com/games-neox/JCenter/master/installv1.gradle'
+
+task installLibrary << {
+    apply from: 'https://raw.githubusercontent.com/games-neox/JCenter/master/bintrayv1.gradle'
+}
+
+installLibrary.dependsOn install
