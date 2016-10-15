@@ -40,6 +40,8 @@ android {
             proguardFiles 'proguard-rules.pro'
         }
     }
+
+    publishNonDefault true
 }
 
 dependencies {

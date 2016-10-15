@@ -10,9 +10,9 @@
 -verbose
 
 # SHRINK
+-keep public class com.gamesneox.defence.Defence
 
 # OPTIMIZE
-
 -assumenosideeffects class com.gamesneox.defence.Defence {
     public static void assertNotNull(...);
     public static void assertCondition(...);

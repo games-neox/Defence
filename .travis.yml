@@ -18,4 +18,4 @@ android:
     - platform-tools
 
 script:
-  - ./gradlew :clean :defence:testDebugUnitTest
+  - ./gradlew :clean :defence:testDebugUnitTest :defence:assembleRelease
