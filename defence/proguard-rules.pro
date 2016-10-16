@@ -13,11 +13,6 @@
 -keep public class com.gamesneox.defence.Defence
 
 # OPTIMIZE
--assumenosideeffects class com.gamesneox.defence.Defence {
-    public static void assertNotNull(...);
-    public static void assertCondition(...);
-}
-
 -optimizationpasses 2
 
 -optimizations !code/simplification/arithmetic,!code/simplification/cast,!field/*,!class/merging/*
