@@ -21,7 +21,8 @@ Defence is available through [jcenter](https://bintray.com/bintray/jcenter). To 
 
 ```gradle
 dependencies {
-    compile 'com.gamesneox.defence:defence:0.3.0'
+    debugCompile 'com.gamesneox.defence:defence:0.4.1:debug@aar'
+    releaseCompile 'com.gamesneox.defence:defence:0.4.1:release@aar'
 }
 ```  
 
