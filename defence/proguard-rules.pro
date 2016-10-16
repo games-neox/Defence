@@ -10,7 +10,7 @@
 -verbose
 
 # SHRINK
--keep public class com.gamesneox.defence.Defence
+-keep public class com.gamesneox.defence.Defence { *; }
 
 # OPTIMIZE
 -optimizationpasses 2
